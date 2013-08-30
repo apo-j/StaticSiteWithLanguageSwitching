@@ -11,23 +11,27 @@
 <div class="translate" data-translate="title"></div>
 <div class="translate" data-translate="hello"></div>
 <div class="translate" data-translate="tt"></div>
-<input id="en" type="button" value="English"/>
-<input id="fr" type="button" value="French"/>
+<input class='ln-switcher' data-ln="2" type="button" value="Chinese"/>
+<input class='ln-switcher' data-ln="1" type="button" value="English"/>
+<input class='ln-switcher' data-ln="0" type="button" value="French"/>
 
 <script>
 $(function(){
 	//language setting
+	$('.ln-switcher').each(function(){
+		if($(this).data('ln') == translator.currentLanguage() ){
+			$(this).hide();
+		}else{
+			$(this).show();
+		}
+	});
 	$('.translate').each(function(){
 		$(this).text(translator.translate($(this).data('translate')));
 	});
 	
-	$('#en').click(function(){
-		if(translator.swithLanguage(1)){
-			location.reload();
-		}
-	});
-	$('#fr').click(function(){
-		if(translator.swithLanguage(0)){
+	$('.ln-switcher').click(function(){
+		var ln = $(this).data('ln');
+		if(translator.swithLanguage(ln)){
 			location.reload();
 		}
 	});
