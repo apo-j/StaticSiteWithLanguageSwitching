@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/resources.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/translator.js"></script>
+</head>
+<body>
+Text : <div id="text"></div>
+<input id="en" type="button" value="English"/>
+<input id="fr" type="button" value="French"/>
+
+<script>
+
+$(function(){
+	$('#text').text(translator.translate('title'));
+	$('#en').click(function(){
+		translator.swithLanguage(1);
+		location.reload();
+	});
+	$('#fr').click(function(){
+		translator.swithLanguage(0);
+		location.reload();
+		//$('#text').text(Translator.translate('title'));
+	});
+})
+
+</script>
+</body>
+</html>
