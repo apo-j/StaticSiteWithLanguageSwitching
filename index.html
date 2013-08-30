@@ -8,22 +8,28 @@
 <script src="js/translator.js"></script>
 </head>
 <body>
-Text : <div id="text"></div>
+<div class="translate" data-translate="title"></div>
+<div class="translate" data-translate="hello"></div>
+<div class="translate" data-translate="tt"></div>
 <input id="en" type="button" value="English"/>
 <input id="fr" type="button" value="French"/>
 
 <script>
-
 $(function(){
-	$('#text').text(translator.translate('title'));
+	//language setting
+	$('.translate').each(function(){
+		$(this).text(translator.translate($(this).data('translate')));
+	});
+	
 	$('#en').click(function(){
-		translator.swithLanguage(1);
-		location.reload();
+		if(translator.swithLanguage(1)){
+			location.reload();
+		}
 	});
 	$('#fr').click(function(){
-		translator.swithLanguage(0);
-		location.reload();
-		//$('#text').text(Translator.translate('title'));
+		if(translator.swithLanguage(0)){
+			location.reload();
+		}
 	});
 })
 
