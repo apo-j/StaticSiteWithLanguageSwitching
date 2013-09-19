@@ -1,0 +1,9 @@
+  select * from logfonctionnelle
+  where Libelle like '%Sell%'
+  order by id desc
+  
+  
+  select  convert(xml,Replace(Libelle,'Devis Selligent -> EspaceClient : ','')), *
+from logfonctionnelle
+where libelle like '%Devis Selligent%'
+and id = 17562
