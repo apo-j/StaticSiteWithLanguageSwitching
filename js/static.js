@@ -1,1 +1,1 @@
-var static = {};static.currentLanguage = 'currentLanguage';
+static.currentLanguage = 'currentLanguage';

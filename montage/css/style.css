@@ -1,0 +1,142 @@
+@font-face {
+	font-family: 'broccolidry';
+	src:url('../fonts/broccolidry.eot');
+	src:url('../fonts/broccolidry.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/broccolidry.woff') format('woff'),
+		url('../fonts/broccolidry.ttf') format('truetype'),
+		url('../fonts/broccolidry.svg#broccolidry') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'broccolidry';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-cart {
+	font-family: 'broccolidry';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	font-size:20px;
+}
+.icon-cart:before {
+	content: "\e000";
+}
+
+
+/* Windows phone 10 and IE 10 viewport with problem solution */
+@-webkit-viewport   { width: device-width; }
+@-moz-viewport      { width: device-width; }
+@-ms-viewport       { width: device-width; }
+@-o-viewport        { width: device-width; }
+@viewport           { width: device-width; }
+
+.page-header{
+	position:relative;
+	margin-top:0;
+	border-bottom:0;
+	padding-bottom:0
+}
+
+#footer{
+border-radius: 6px;
+border-top-left-radius: 6px;
+border-top-right-radius: 6px;
+border-bottom-right-radius: 6px;
+border-bottom-left-radius: 6px;
+}
+
+/*page - header */
+.language-flag, .login-out{
+    display: inline-block;
+    float: right;
+    height: 22px;
+    margin-top: -20px;
+    width: 24px;
+}
+.language-flag.fr{
+margin-right:5px;
+background-image: url("../imgs/United-Kingdom-flag-24.png");
+}
+.language-flag.en{
+margin-right:5px;
+background-image: url("../imgs/France-Flag-24.png");
+display:none;
+}
+.login-out{
+    margin-left: 5px;
+    margin-top: -18px;
+    padding-left: 8px;
+    padding-top: 5px;
+    width: 50px;
+	border-left:1px solid #CCCCCC;
+}
+/* search input */
+.search-form.products {
+width: 350px;
+padding-right: 0;
+margin-top:-30px;
+height: 28px;
+}
+.glyphicon.glyphicon-search {
+    display: inline-block;
+    left: 332px;
+    position: relative;
+    top: -23px;
+}
+.input-group.search{
+	width:350px;
+	padding:0;
+}
+.input-group .form-control:first-child{
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+.form-control.search {
+    height: 28px;
+}
+/* navbar */
+.navbar {
+    min-height:40px;
+	height:40px;
+}
+.navbar-brand {
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.navbar-nav {
+    height: 40px;
+}
+.navbar-nav > li > a {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.navbar.navbar-default{
+	margin-bottom:20px;
+}
+
+/* sidebar */
+#sidebar{
+	padding-left:0;
+}

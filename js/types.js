@@ -1,1 +1,1 @@
-var types = {};types.languages = {	Chinese:'zh',	French:'fr',	English:'en'}
+types.languages = {	Chinese:'zh',	French:'fr',	English:'en'}

@@ -1,1 +1,1 @@
-var resources = resources || (function(){	var resources = {		hello:{			en:'Hello',			fr:'Bonjour'		},		title:{			en:'Title',			fr:'Titre'		},		tt:{			en:'TTTT'		}	};			return resources;}(resources || {}))
+var resources = resources || (function(){	var resources = {		hello:{			en:'Hello',			fr:'Bonjour',			zh:'nih hello'		},		title:{			en:'Title',			fr:'Titre',			zh:'nih title'		},		tt:{			en:'TTTT',			fr:'TTTTTTfr',			zh:'nih ttt'		}	};			return resources;}(resources || {}))

@@ -2,54 +2,35 @@
 <html>
 <head>
 <title></title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="js/knockout-2.3.0.js"></script>
-<script src="js/knockout.mapping.js"></script>
-<script src="js/resources.js"></script>
-<script src="js/jquery.cookie.js"></script>
-<script src="js/utils.js"></script>
-<script src="js/static.js"></script>
-<script src="js/types.js"></script>
-<script src="js/global.js"></script>
-<script src="js/translator.js"></script>
 </head>
 <body>
-<div class="translate" data-bind="text:translator.translate('title')"></div>
-<div class="translate" data-translate="hello"></div>
-<div class="translate" data-translate="tt"></div>
-<input class='ln-switcher' data-ln="zh" type="button" value="Chinese"/>
-<input class='ln-switcher' data-ln="en" type="button" value="English"/>
-<input class='ln-switcher' data-ln="fr" type="button" value="French"/>
-
-<script>
-	var viewModel = function(){
-		var self = this;
-	};
-$(function(){
-	var vm = new viewModel();
-	ko.applyBindings(vm);
 
 
-	//language setting
-	$('.ln-switcher').each(function(){
-		if($(this).data('ln') == translator.currentLanguage() ){
-			$(this).hide();
-		}else{
-			$(this).show();
-		}
-	});
-	$('.translate').each(function(){
-		$(this).text(translator.translate($(this).data('translate')));
-	});
-	
-	$('.ln-switcher').click(function(){
-		var ln = $(this).data('ln');
-		if(translator.swithLanguage(ln)){
-			location.reload();
-		}
-	});
-})
 
-</script>
+
+
+
+
+
+
+
+
+<div data-bind="text:translator.translate('title')"></div>
+<div data-bind="text:translator.translate('hello')"></div>
+
+<input class='ln-switcher' data-ln="zh" data-bind="click:switchLanguage" type="button" value="Chinese"/>
+<input class='ln-switcher' data-ln="en" data-bind="click:switchLanguage" type="button" value="English"/>
+<input class='ln-switcher' data-ln="fr" data-bind="click:switchLanguage" type="button" value="French"/>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script src="js/knockout-2.3.0.js" type="text/javascript"></script>
+<script src="js/knockout.mapping.js" type="text/javascript"></script>
+<script src="js/Namespace.js" type="text/javascript"></script>
+<script src="js/jquery.cookie.js" type="text/javascript"></script>
+<script src="js/global.js" type="text/javascript"></script>
+<script src="js/resources.js" type="text/javascript"></script>
+<script src="js/dataStorage.js" type="text/javascript"></script>
+<script src="js/translator.js" type="text/javascript"></script>
+<script src="js/page.js" type="text/javascript"></script>
 </body>
 </html>
