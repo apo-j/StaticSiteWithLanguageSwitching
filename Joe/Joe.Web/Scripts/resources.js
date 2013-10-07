@@ -1,0 +1,3 @@
+﻿var resources = resources || (function(){    var resources = {        SITE_NAME:{            en: 'Brandex',            fr: 'Brandex',            zh: 'Brandex'        },        ABOUT_US: {
+            en: 'About us',            fr: 'Nous connaître',            zh: '公司简介'
+        },		hello:{			en:'Hello',			fr:'Bonjour',			zh:'nih hello'		},		title:{			en:'Title',			fr:'Titre',			zh:'nih title'		},		tt:{			en:'TTTT',			fr:'TTTTTTfr',			zh:'nih ttt'		}	};			return resources;}(resources || {}))

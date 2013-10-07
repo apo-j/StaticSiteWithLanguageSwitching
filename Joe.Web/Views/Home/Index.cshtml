@@ -1,0 +1,214 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="@Url.Content("Content/styles.css")">
+    <link rel="stylesheet" href="@Url.Content("Content/site.css")">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <menu class="language">
+                <a class='ln-switcher zh' data-ln="zh" data-bind="click:switchLanguage" href="javascript:void(0)">zh
+                </a>
+                <a class='ln-switcher en' data-ln="en" data-bind="click:switchLanguage" href="javascript:void(0)">en
+                </a>
+                <a class='ln-switcher fr' data-ln="fr" data-bind="click:switchLanguage" href="javascript:void(0)">fr
+                </a>
+            </menu>
+            <ul>
+                <li class="active">
+                    <a href="/" class="fortrabbit home">Brandex</a>
+                </li>
+
+                <li class="">
+                    <a href="/pricing" class="hidemobile">Pricing</a>
+                </li>
+
+                <li class="">
+                    <a href="/a-z" class="hidemobile">Features</a>
+                </li>
+
+                <li class="">
+                    <a href="/about" class="hidemobile">About</a>
+                </li>
+
+                <li class="">
+                    <a href="/docs" class="hidemobile">Docs</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div role="main" id="main" class="backgroundimage  screenshot4 ">
+        <div class="container">
+            <hgroup>
+                <h1 data-bind="text:translator.translate('title')"></h1>
+                <h2>PHP as a Service</h2>
+            </hgroup>
+            <div class="youtubewrapper">
+            </div>
+        </div>
+        <div class="container">
+            <div class="actions end dark">
+                <div>
+                    <a class="btn" id="playvideo" href="#youtubewrapper">Watch a video</a>
+                    <a class="btn btn-pill" href="https://my.fortrabbit.com/register">Sign up free <span class="nophone">→</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- #main -->
+    <footer>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="span3">
+                        <h5>Platform
+                        </h5>
+                        <ul>
+                            <li>
+                                <a href="/about">About
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/pricing">Pricing
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/docs">Docs
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/roadmap">Roadmap
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/changelog">Changelog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span3">
+                        <h5>
+                            <a href="/solutions">Solutions</a>
+                        </h5>
+                        <ul>
+                            <li>
+                                <a href="/solutions/hosting-for-freelancers">Freelancers
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/solutions/hosting-for-web-agencies">Web agencies
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/solutions/hosting-for-startups">Startups
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/solutions/high-availability-hosting">High availability
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span3">
+                        <h5>Fine print
+                        </h5>
+                        <ul>
+                            <li>
+                                <a href="/legal-notice" title="See the Imprint">Legal notice
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/privacy" title="See the Data Privacy Statement">Privacy policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/terms" title="See the Terms and Conditions">Terms
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- .row -->
+                <div class="row">
+                    <div class="span3">
+                        <h5>Get in touch
+                        </h5>
+                        <ul>
+                            <li>
+                                <a title="call me baby" href="tel:+4930609807840">+49-30-609807840</a>
+                            </li>
+                            <li>
+                                <a title="mail us" href="mailto:info@fortrabbit.com">info@fortrabbit.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span3">
+                        <h5>Company
+                        </h5>
+                        <ul>
+                            <li>
+                                <a href="/team">Team
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://blog.fortrabbit.com">Blog
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="span3">
+                        <h5>Social
+                        </h5>
+                        <ul>
+                            <li>
+                                <a title="visit fortrabbit on Twitter" href="http://twitter.com/fortrabbit">Twitter
+                                </a>
+                            </li>
+                            <li>
+                                <a title="visit fortrabbit on GitHub" href="https://github.com/fortrabbit">GitHub
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- .container -->
+            <div class="subfooter">
+                <div class="container">
+                    <em class="fortrabbit">• fortrabbit</em> Made in Berlin Kreuzberg. Powered by Amazon Web Services.
+                </div>
+            </div>
+        </div>
+        <!-- wrapper -->
+    </footer>
+    @*  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-32804181-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  </script>*@
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="@Url.Content("Scripts/knockout-2.3.0.js")" type="text/javascript"></script>
+    <script src="@Url.Content("Scripts/knockout.mapping.js")" type="text/javascript"></script>
+    <script src="@Url.Content("Scripts/Namespace.js")" type="text/javascript"></script>
+    <script src="@Url.Content("Scripts/jquery.cookie.js")" type="text/javascript"></script>
+    <script src="@Url.Content("Scripts/global.js")" type="text/javascript"></script>
+    <script src="@Url.Content("Scripts/resources.js")" type="text/javascript"></script>
+    <script src="@Url.Content("Scripts/dataStorage.js")" type="text/javascript"></script>
+    <script src="@Url.Content("Scripts/translator.js")" type="text/javascript"></script>
+    <script src="@Url.Content("Scripts/page.js")" type="text/javascript"></script>
+</body>
+</html>

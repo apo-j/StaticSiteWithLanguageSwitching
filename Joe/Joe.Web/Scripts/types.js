@@ -1,0 +1,1 @@
+types.languages = {	Chinese:'zh',	French:'fr',	English:'en'}

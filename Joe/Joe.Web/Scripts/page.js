@@ -1,0 +1,1 @@
+var viewModel = function(){	var self = this;		self.switchLanguage = function(data, event){		var ln = $(event.target).data('ln');		console.log(ln);		if(translator.swithLanguage(ln)){			location.reload();		}	};};$(function(){	ko.applyBindings(new viewModel());})

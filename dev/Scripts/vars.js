@@ -1,0 +1,1 @@
+vars.currentLanguage = types.languages.Chinese

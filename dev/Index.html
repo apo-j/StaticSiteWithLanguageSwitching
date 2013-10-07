@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brandex</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/site.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <menu class="language">
+                <a class='ln-switcher zh' data-ln="zh" data-bind="click:switchLanguage" href="javascript:void(0)">zh
+                </a>
+                <a class='ln-switcher en' data-ln="en" data-bind="click:switchLanguage" href="javascript:void(0)">en
+                </a>
+                <a class='ln-switcher fr' data-ln="fr" data-bind="click:switchLanguage" href="javascript:void(0)">fr
+                </a>
+            </menu>
+            <ul>
+                <li class="active">
+                    <a href="javascript:void(0)" class="fortrabbit home" data-part="index" data-bind="click:toggle,text:translator.translate('SITE_NAME')">Brandex</a>
+                </li>
+
+                <li class="">
+                    <a href="javascript:void(0)" class="hidemobile active" data-part="about" data-bind="click:toggle,text: translator.translate('ABOUT_US')"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div role="main" id="main" class="backgroundimage  screenshot4 ">
+        <div class="container" data-bind="foreach:parts">
+			<hgroup data-bind="visible:on">
+				<div id="index" class="part">
+					<div class="title" data-bind="text:title"></div>
+					<div>INDEX TTT</div>
+				</div>
+			</hgroup>
+        </div>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="./Scripts/knockout-2.3.0.js" type="text/javascript"></script>
+    <script src="./Scripts/knockout.mapping.js" type="text/javascript"></script>
+    <script src="./Scripts/Namespace.js" type="text/javascript"></script>
+    <script src="./Scripts/jquery.cookie.js" type="text/javascript"></script>
+    <script src="./Scripts/global.js" type="text/javascript"></script>
+    <script src="./Scripts/resources.js" type="text/javascript"></script>
+    <script src="./Scripts/dataStorage.js" type="text/javascript"></script>
+    <script src="./Scripts/translator.js" type="text/javascript"></script>
+    <script src="./Scripts/page.js" type="text/javascript"></script>
+</body>
+</html>
