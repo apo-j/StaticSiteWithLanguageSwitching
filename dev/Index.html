@@ -31,8 +31,18 @@
         <div class="container" data-bind="foreach:parts">
 			<hgroup data-bind="visible:on">
 				<div id="index" class="part">
+					<div class="sidebar" data-bind="visible:hasSideBar">
+						<ul data-bind="foreach:sideBar.items">
+							<li><a data-bind="text:title" href="javascript:void(0)"></a></li>
+						</ul>
+					</div>
 					<div class="title" data-bind="text:title"></div>
-					<div>INDEX TTT</div>
+					<div data-bind="foreach:sections.items">
+						<div id="">
+						<h4 data-bind="text:title"></h4>
+						<div data-bind="text:body"></div>
+						</div>
+					</div>
 				</div>
 			</hgroup>
         </div>

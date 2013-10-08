@@ -15,3 +15,13 @@
 .language > a.zh {
     background-image: url("../Images/China-flag-24.png");
 }
+.sidebar {
+    background-color: #808080;
+    float: left;
+    height: 200px;
+    margin-right: 30px;
+    width: 200px;
+}
+hgroup {
+    padding: 70px 0 40px;
+}
