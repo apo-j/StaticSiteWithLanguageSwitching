@@ -33,13 +33,12 @@
 				<div id="index" class="page">
 					<div class="sidebar" data-bind="visible:hasSideBar">
 						<ul data-bind="foreach:sideBar.items">
-							<li><a data-bind="text:title" href="javascript:void(0)"></a></li>
+							<li><a data-bind="text:title, click:$root.aboutSwitchSection" href="javascript:void(0)"></a></li>
 						</ul>
 					</div>
 					<div class="page-body">
-						<div class="title" data-bind="text:title"></div>
 						<div data-bind="foreach:sections.items">
-							<div id="">
+							<div data-bind="visible:on">
 								<h4 data-bind="text:title"></h4>
 								<div data-bind="text:body"></div>
 							</div>
