@@ -1,0 +1,1 @@
+enums.sideBarItemEnum = {	Introduction : 'INTRODUCTION',	Details : 'DETAILS'};enums.navBarTraductionCodeEnum = {	SiteName : 'SITE_NAME',	About : 'ABOUT_US'};enums.traductionCodeEnum = {	PageIndexTitle : 'PAGE_INDEX_TITLE',	PageAboutTitle : 'PAGE_ABOUT_TITLE',	Introduction :'INTRODUCTION'};

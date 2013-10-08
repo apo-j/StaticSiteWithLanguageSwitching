@@ -1,3 +1,3 @@
 ﻿var resources = resources || (function(){    var resources = {        SITE_NAME:{            en: 'Brandex',            fr: 'Brandex',            zh: 'Brandex'        },        ABOUT_US: {
             en: 'About us',            fr: 'Nous connaître',            zh: '公司简介'
-        },		PART_INDEX_TITLE:{			en:'Index',			fr:'Accueil',			zh:'首页'		},		PART_ABOUT_TITLE:{			en:'About us',			fr:'Nous connaître',			zh:'公司简介'		},		tt:{			en:'TTTT',			fr:'TTTTTTfr',			zh:'nih ttt'		}	};			return resources;}(resources || {}))
+        },		PAGE_INDEX_TITLE:{			en:'Index',			fr:'Accueil',			zh:'首页'		},		PAGE_ABOUT_TITLE:{			en:'About us',			fr:'Nous connaître',			zh:'公司简介'		},		INTRODUCTION:{			en:'Introduction',			fr:'Introduction',			zh:'简介'		},		DETAILS:{			en:'Details',			fr:'Détails',			zh:'详细'		}	};			return resources;}(resources || {}))
