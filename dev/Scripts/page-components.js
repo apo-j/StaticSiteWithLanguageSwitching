@@ -1,16 +1,18 @@
 //definition of basic bricks
-	components.blocItem = function(id, on, title, src){
+	components.blocItem = function(id, on, type, title, attr, dataAttr){
 			var self = this;
 			self.id = id;
+			self.type = type;
 			self.on = ko.observable(on || false);
 			self.title = translator.translate(title);
-			self.src = src;
+			self.attr = attr || {};
+			self.dataAttr = dataAttr || {};
 	};
 	components.bloc = function(id, on, type, title, items){
 			var self = this;
 			self.id = id;
-			self.on = ko.observable(on || false);
 			self.type = type;
+			self.on = ko.observable(on || false);
 			self.title = translator.translate(title);
 			self.items = items || [];
 	};

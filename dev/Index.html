@@ -31,14 +31,75 @@
         <div class="container" data-bind="foreach:pages">
 			<hgroup data-bind="visible:on()">
 				<div id="index" class="page">
-					<div class="sidebar" data-bind="visible:leftSideBar.on">
-						<ul data-bind="foreach:leftSideBar.items">
-							<li><span data-bind="text:title"></span>
+					<div class="sidebar leftsidebar" data-bind="visible:leftSideBar.on(), foreach:leftSideBar.items">
+							<div data-bind="visible:on()">
+								<span data-bind="text:title"></span>
+								<span data-bind="if: type == enums.blocTypeEnum.Standalone">
+										<!-- ko if: type === enums.blocItemTypeEnum.Text -->
+											<span data-bind="text:items.title, attr:items.attr, dataAttr:items.dataAttr"></span>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.Link -->
+											<a data-bind="text:items.title, attr:items.attr, dataAttr:items.dataAttr" href="javascript:void(0)"></a>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.Image -->
+											<img data-bind="text:items.title, attr:items.attr, dataAttr:items.dataAttr"/>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.ImageLink -->
+											<a data-bind="attr:items.attr"><img data-bind="text:items.title, attr:items.attr, dataAttr:items.dataAttr"/></a>
+										<!-- /ko -->
+								</span>	
+								<div data-bind="if: type === enums.blocTypeEnum.List">
 								<ul data-bind="foreach:items">
-									<li><a data-bind="text:title" href="javascript:void(0)"></a></li>
+										<!-- ko if: type === enums.blocItemTypeEnum.Text -->
+											<li><span data-bind="text:title, attr:attr, dataAttr:dataAttr"></span></li>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.Link -->
+											<li><a data-bind="text:title, attr:attr, dataAttr:dataAttr" href="javascript:void(0)"></a></li>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.Image -->
+											<li><img data-bind="text:title, attr:attr, dataAttr:dataAttr"/></li>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.ImageLink -->
+											<li><a data-bind="attr:attr"><img data-bind="text:title, attr:attr, dataAttr:dataAttr"/></a></li>
+										<!-- /ko -->
 								</ul>
-							</li>
-						</ul>
+								</div>
+							</div>
+					</div>
+					<div class="sidebar rightsidebar" data-bind="visible:leftSideBar.on(), foreach:leftSideBar.items">
+							<div data-bind="visible:on()">
+								<span data-bind="text:title"></span>
+								<span data-bind="if: type == enums.blocTypeEnum.Standalone">
+										<!-- ko if: type === enums.blocItemTypeEnum.Text -->
+											<span data-bind="text:items.title, attr:items.attr, dataAttr:items.dataAttr"></span>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.Link -->
+											<a data-bind="text:items.title, attr:items.attr, dataAttr:items.dataAttr" href="javascript:void(0)"></a>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.Image -->
+											<img data-bind="text:items.title, attr:items.attr, dataAttr:items.dataAttr"/>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.ImageLink -->
+											<a data-bind="attr:items.attr"><img data-bind="text:items.title, attr:items.attr, dataAttr:items.dataAttr"/></a>
+										<!-- /ko -->
+								</span>	
+								<div data-bind="if: type === enums.blocTypeEnum.List">
+								<ul data-bind="foreach:items">
+										<!-- ko if: type === enums.blocItemTypeEnum.Text -->
+											<li><span data-bind="text:title, attr:attr, dataAttr:dataAttr"></span></li>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.Link -->
+											<li><a data-bind="text:title, attr:attr, dataAttr:dataAttr" href="javascript:void(0)"></a></li>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.Image -->
+											<li><img data-bind="text:title, attr:attr, dataAttr:dataAttr"/></li>
+										<!-- /ko -->
+										<!-- ko if: type === enums.blocItemTypeEnum.ImageLink -->
+											<li><a data-bind="attr:attr"><img data-bind="text:title, attr:attr, dataAttr:dataAttr"/></a></li>
+										<!-- /ko -->
+								</ul>
+								</div>
+							</div>
 					</div>
 					<div class="page-body">
 						<div data-bind="foreach:sections.items">
@@ -56,6 +117,7 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
     <script src="./Scripts/knockout-2.3.0.js" type="text/javascript"></script>
     <script src="./Scripts/knockout.mapping.js" type="text/javascript"></script>
+	<script src="./Scripts/knockoutextensions.js" type="text/javascript"></script>
     <script src="./Scripts/Namespace.js" type="text/javascript"></script>
     <script src="./Scripts/jquery.cookie.js" type="text/javascript"></script>
     <script src="./Scripts/global.js" type="text/javascript"></script>

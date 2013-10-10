@@ -1,8 +1,33 @@
-ko.bindingHandlers.linkToSection = {
+ko.bindingHandlers.attr = {
+    init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+		var value = ko.utils.unwrapObservable(valueAccessor());
+		
+		for(var i in value){
+			if(value.hasOwnProperty(i) && !!value[i]){
+				$(element).attr(i, value[i]);
+			}
+		}
+    }
+};
+
+ko.bindingHandlers.dataAttr = {
+    init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
+		var value = ko.utils.unwrapObservable(valueAccessor());
+		
+		for(var i in value){
+			if(value.hasOwnProperty(i) && !! value[i]){
+				$(element).data(i, value[i]);
+			}
+		}
+    }
+};
+
+
+ko.bindingHandlers.Example = {
     init: function (element, valueAccessor, allBindingsAccessor, viewModel) {
 		var value = ko.utils.unwrapObservable(valueAccessor());
 
-		$(element).data('orgin', value);
+		$(element).attr('src', value);
     },
     update: function (element, valueAccessor) {
         var current = ko.utils.unwrapObservable(valueAccessor());

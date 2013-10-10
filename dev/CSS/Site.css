@@ -15,11 +15,22 @@
 .language > a.zh {
     background-image: url("../Images/China-flag-24.png");
 }
-.sidebar {
+.leftsidebar {
     background-color: #808080;
     height: 200px;
     width: 200px;
 	position:fixed;
+}
+.sidebar {
+    background-color: #808080;
+    height: 200px;
+    width: 200px;
+}
+.rightsidebar {
+	float:left;
+}
+.rightsidebar {
+	float:right;
 }
 hgroup {
     padding: 70px 0 40px;
@@ -33,4 +44,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .page-body{
 	margin-left:230px;
+}
+.flag1{
+	display:inline-block;
+    width:24px;
+    height:22px;
+    margin-top: 7px;
+    text-indent: 99999999px;
+    margin-left:0;
+	background-image: url("../Images/France-flag-24.png");
+}
+ul{
+	list-style-type:none;
 }
